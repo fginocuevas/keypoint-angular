@@ -1,5 +1,5 @@
 import { UserProfileModel } from './../../models/user/user-profile.model';
-import { LoginUserModel } from './../../models/user/login-user-model';
+import { LoginUserModel } from './../../models/user/login-user.model';
 import { LoginService  } from './../../services/login/login.service';
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("currentUser", JSON.stringify(data));
         console.log("Login Success! ");
         //console.log(data);
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('/dashboard/home');
         this.onLoginSuccess.emit(true);
       }
     );

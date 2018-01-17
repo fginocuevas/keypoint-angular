@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SkillsCatalogComponent } from './components/skills-catalog/skills-catalog.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { SearchSkillsComponent } from './components/home-page/search-skills/search-skills.component';
+import { CatalogComponent } from './components/skills-catalog/catalog/catalog.component';
+import { SkillService } from './services/skill/skill.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { SearchSkillsComponent } from './components/home-page/search-skills/sear
     SkillsCatalogComponent,
     ExploreComponent,
     SearchSkillsComponent,
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,9 +34,7 @@ import { SearchSkillsComponent } from './components/home-page/search-skills/sear
     HttpClientModule,
     RoutingModule
   ],
-  providers: [
-
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

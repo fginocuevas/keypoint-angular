@@ -1,33 +1,34 @@
-<div class="container-fluid">
-
-  <div class="container">
-
-    <div id="search" class="row">
-
-      <div id="searchSkills" class="col-lg-5 col-sm-12">
-        Search Skills
-        <app-search-skills></app-search-skills>
-      </div>
-      
-      <div id="video" class="col-lg-7 col-sm-12">
-        Video
-      </div>
-
+<div class="container p-4">
+  <div id="search" class="row mb-5 p-4">
+    <div id="searchSkills"  class="col-lg-5 col-sm-12">
+      <app-search-skills></app-search-skills>
     </div>
-    <div id="explore" class="row">
-      <div class="col-12">Explorer</div>
+    <div id="video" class="col-lg-7 col-sm-12">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="../assets/videos/showcase.mp4"></iframe>
+        </div>
     </div>
-
-    <div id="learningPath" class="row">
-      <div class="col-12">Learning Path</div>
-    </div>
-    
-    <div id="inDemand" class="row">
-      <div class="col-12">Most In-demand</div> 
-    </div> 
-
-
-
   </div>
 
+  <div id="explore" height="400px" class="row mb-5">
+        <div class="col-6">
+          <img src="../assets/images/creative-passionate-effective.png" class="rounded" alt="Creative Passionate Effective Image">
+        </div>
+        <div class="col-6 py-5 text-left">
+            <p class="h3">Growing your skills</p>
+            <p class="h3">Widening your horizons</p>
+            <p class="h5">There's always time to learn something new or delve deeper into a topic that really interests you.</p>
+            <p class="h5">The opportunities to improve your knowledge and expand your horizons are endless.</p>
+            <button type="button" routerLink="../explore" class="btn btn-outline-primary btn-md btn-block">EXPLORE</button>
+        </div>
+  </div>
+
+  <div id="learningPath" class="row mb-5 p-4">
+    <div class="col-12">Learning Path</div>
+  </div>
+  
+  <div id="inDemand" class="row mb-5 p-4">
+    <div class="col-12">Most In-demand</div> 
+  </div> 
 </div>
+

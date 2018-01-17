@@ -6,7 +6,8 @@ import { DashboardRoutingModule } from './dashboard.routing.module';
 
 const APP_ROUTES: Routes = [
   {path: "login", component: LoginComponent},
-  {path: "", redirectTo:"/login", pathMatch: "full"}
+  {path: "", redirectTo:"/login", pathMatch: "full"},
+  //{ path: '**', component: PageNotFoundComponent }
 ]
 
 @NgModule({

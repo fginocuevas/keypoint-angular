@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <span class="oi oi-magnifying-glass"></span> 
+      </span>   
+    </div>
+    <input type="text" name="searchSkill" class="form-control" [(ngModel)]="skill" (keyup)="searchSkill()" placeholder="What skill are you looking for?" aria-label="Search Skill">
+  </div>
+</div>
+
+<div class="row">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">My Skills</a>
+    </li>
+  </ul>
+</div>
+
+<div class="row no-gutters">
+      <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let skill of skillsResults">
+        <div class="card card-shadow ">
+            <img class="card-img-top" src="../assets/images/Skills/adobe-experience-design.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{skill.name}}</h5>
+              <p class="card-text"><small>{{skill.description}}</small></p>
+            </div>
+          </div>
+      </div>
+</div>
+
+

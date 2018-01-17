@@ -11,7 +11,7 @@ const DASHBOARD_ROUTES: Routes = [
   {
     path: "dashboard", component: DashboardComponent,
     children: [
-      {path: "", component: HomePageComponent},
+      {path: "", redirectTo:"home", pathMatch: "full"},
       {path: "home", component: HomePageComponent},
       {path: "skills-catalog", component: SkillsCatalogComponent, pathMatch:"full"},
       {path: "skills-catalog/:skill", component: SkillsCatalogComponent},

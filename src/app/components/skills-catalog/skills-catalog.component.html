@@ -2,22 +2,25 @@
 
   <div class="container">
 
-    <div class="row">Header</div>
     <div class="row">
-      Search Bar
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <span class="oi oi-magnifying-glass"></span> 
-            </span>   
-          </div>
-          <input type="text" name="searchSkill" class="form-control" [(ngModel)]="skill" placeholder="What skill are you looking for?" aria-label="Search Skill">
-        </div>
-
+      <h3>Select your skills and expertise</h3>
+      <p>You can also select skills you're interested in. 
+        We'll offer you projects and trainings based on these or share 
+        you skills and knowledge to others. Showcase a valued credential and be in demand!</p>
     </div>
-    <div class="row">Skill Catalog</div>
-    <div class="row">Footer</div>
+
+    <app-catalog [skill]="skill"></app-catalog>
+
+    <div class="row card text-center border-0">
+      <div class="card-body">
+        <h5 class="card-title">
+            <img src="assets/images/explore-skill.png" class="rounded mx-auto d-block" alt="Explore Skill Image">
+        </h5>
+        <h5 class="card-text">Couldn't find what you're looking for?</h5>
+        <a href="#" class="btn btn-primary">Suggest a skill</a>
+      </div>
+    </div>
+
 
   </div>
 
