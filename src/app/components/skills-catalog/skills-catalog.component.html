@@ -1,3 +1,24 @@
-<p>
-  skills-catalog works!
-</p>
+<div class="container-fluid">
+
+  <div class="container">
+
+    <div class="row">Header</div>
+    <div class="row">
+      Search Bar
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <span class="oi oi-magnifying-glass"></span> 
+            </span>   
+          </div>
+          <input type="text" name="searchSkill" class="form-control" [(ngModel)]="skill" placeholder="What skill are you looking for?" aria-label="Search Skill">
+        </div>
+
+    </div>
+    <div class="row">Skill Catalog</div>
+    <div class="row">Footer</div>
+
+  </div>
+
+</div>
