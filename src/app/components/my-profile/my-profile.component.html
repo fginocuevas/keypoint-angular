@@ -1,3 +1,69 @@
-<p>
-  my-profile works!
-</p>
+
+<div class="row-fluid bg">
+  <div class="jumbotron jumbotron-fluid no-gutter">
+      <div class="container">
+        <!-- <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+
+        <div class="row">
+          <div class="col-4 text-right">
+            <img src="../assets/images/Users/louis-litt.png" class="rounded-circle profile-pic" alt="Profile Picture">
+          </div>
+        
+          <div class="col-8 text-right">
+            <p class="h4 text-center">Hi! I'm {{currentUserFuck.name}}</p>
+            <p class="h5 text-center">an expert in {{currentUserFuck.role.roleName}} from {{currentUserFuck.businessGroupObject.businessGroup}}</p>
+            <p class="h5 text-center">Skill Level</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="container">
+        <tabset>
+            <tab heading="Skills" id="tab1">
+              <div class="row no-gutters">
+                  <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let skill of mySkills">
+                    <div class="card card-shadow">
+                      <img class="card-img-top" src="../assets/images/Skills/adobe-experience-design.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{skill.name}}</h5>
+                        <p class="card-text"><small>{{skill.description}}</small></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </tab>
+            <tab heading="Skill Set">
+              <div class="row no-gutters">
+                  <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let skill of skillsResults">
+                    <div class="card card-shadow" (click)="setSelectedSkill(skill); lgModal.show()">
+                      <img class="card-img-top" src="../assets/images/Skills/axure.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{skill.name}}</h5>
+                        <p class="card-text"><small>{{skill.description}}</small></p>
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+            </tab>
+          </tabset>
+    </div>
+  </div>
+  
+  <div class="row card text-center border-0">
+    <div class="card-body">
+      <h5 class="card-title">
+          <img src="assets/images/skill-catalog-empty-state.png" class="rounded mx-auto d-block" alt="Explore Skill Image">
+      </h5>
+      <h5 class="card-text">Add more skills!</h5>
+      <a href="#" class="btn btn-primary">Add Skills</a>
+    </div>
+  </div>
+    
+  

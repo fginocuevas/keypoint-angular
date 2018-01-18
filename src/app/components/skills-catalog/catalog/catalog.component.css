@@ -1,3 +1,12 @@
 .card{
     height: 350px;
 }
+
+.card-modal{
+    margin: 0px;
+    padding: 0px;
+}
+
+button.pull-right {
+    float: right !important; 
+}

@@ -1,3 +1,4 @@
+import { MySkillModel } from './../../models/skill/my-skill.model';
 import { UserProfileModel } from './../../models/user/user-profile.model';
 import { LoginUserModel } from './../../models/user/login-user.model';
 import { LoginService  } from './../../services/login/login.service';
@@ -32,10 +33,11 @@ export class LoginComponent implements OnInit {
 
     this.sub= this.loginSvc.login(this.loginUserModel).subscribe(
       (data: UserProfileModel) => {
-        // Set currentUser: UserProfileModel into localStorage
+        //Initialize cache
+        localStorage.setItem("currentUserName", this.username);
         localStorage.setItem("currentUser", JSON.stringify(data));
+        localStorage.setItem("mySkills", "[]")
         console.log("Login Success! ");
-        //console.log(data);
         this.router.navigateByUrl('/dashboard/home');
         this.onLoginSuccess.emit(true);
       }

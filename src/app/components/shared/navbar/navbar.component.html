@@ -8,26 +8,29 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item" routerLinkActive="active">
         <a routerLink="home" class="nav-link">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a routerLink="skills-catalog" class="nav-link">Skill Catalog</a>
       </li> 
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a routerLink="explore" class="nav-link">Explore</a>
       </li>
     </ul>
 
-    <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </button>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Settings</button>
-          <button class="dropdown-item" type="button">Logout</button>
-        </div>
-      </div>
+    <div class="btn-group" dropdown>
+      <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+        <a routerLink="my-profile"><img src="../assets/images/Users/louis-litt.png" class="rounded-circle profile-pic" alt="Profile Picture"></a>
+        <span class="caret"></span>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+        <li role="menuitem"><button class="dropdown-item">Settings</button></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><button (click)="logout()" class="dropdown-item">Logout</button>
+        </li>
+      </ul>
+    </div>
 
   </div>
 </nav>

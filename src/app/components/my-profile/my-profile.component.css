@@ -1,0 +1,16 @@
+.bg {
+    background: url('/assets/images/my-profile-background.png') no-repeat center center;
+    background-size: cover;
+    /* position: fixed; Cool to put in home */
+    height: 500px; /*same height as jumbotron */
+    top:0;
+    left:0;
+    z-index: -1;
+  }
+  
+  .jumbotron {
+    margin-bottom: 0px;
+    height: 500px;
+    color: white;
+    background:transparent;
+  }

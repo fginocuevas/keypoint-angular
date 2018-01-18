@@ -14,6 +14,10 @@ import { ExploreComponent } from './components/explore/explore.component';
 import { SearchSkillsComponent } from './components/home-page/search-skills/search-skills.component';
 import { CatalogComponent } from './components/skills-catalog/catalog/catalog.component';
 import { SkillService } from './services/skill/skill.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { RatingModule } from 'ngx-bootstrap/rating';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { SkillService } from './services/skill/skill.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RoutingModule
+    RoutingModule,
+    ModalModule.forRoot(),
+    RatingModule.forRoot(),
+    TabsModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

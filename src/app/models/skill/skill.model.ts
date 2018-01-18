@@ -5,6 +5,7 @@ export class SkillModel {
     createdDate: number;
     createdBy: string;
     description: string;
+    skillProficiencyId: number;
 }
 
 // {
