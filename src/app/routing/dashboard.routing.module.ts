@@ -1,4 +1,4 @@
-import { MyProfileComponent } from './../components/my-profile/my-profile.component';
+import { ProfileComponent } from './../components/profile/profile.component';
 import { ExploreComponent } from './../components/explore/explore.component';
 import { DashboardComponent } from './../components/dashboard/dashboard.component';
 import { HomePageComponent } from './../components/home-page/home-page.component';
@@ -16,7 +16,7 @@ const DASHBOARD_ROUTES: Routes = [
       {path: "skills-catalog", component: SkillsCatalogComponent, pathMatch:"full"},
       {path: "skills-catalog/:skill", component: SkillsCatalogComponent},
       {path: "explore", component: ExploreComponent},
-      {path: "my-profile", component: MyProfileComponent},
+      {path: "profile", component: ProfileComponent},
     ]
   }
   

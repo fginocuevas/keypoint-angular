@@ -18,6 +18,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     ExploreComponent,
     SearchSkillsComponent,
     CatalogComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
