@@ -7,3 +7,12 @@
 .card-center{
     padding-top: 100px;
 }
+
+.homepage-background {
+    background: url('/assets/images/homepage-background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300vh; 
+    top:0;
+    left:0;
+    z-index: -1;
+  }

@@ -8,6 +8,7 @@ import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { SaveSkillModel } from '../../../models/skill/save-skill.model';
 import { ModalDirective } from 'ngx-bootstrap/modal';
+import { KeypointConstants } from '../../shared/keypoint-constants';
 
 @Component({
   selector: 'app-catalog',
@@ -29,6 +30,9 @@ export class CatalogComponent implements OnInit {
   private readonly DEFAULT_RATING_LEVEL= 3;
   private levelSelected: LevelModel;
   private mySkills: MySkillModel[];
+  private shouldPaginate: boolean = false;
+  private itemsPerPage: number= KeypointConstants.PAGINATE_ITEMS_PER_PAGE;
+  private shouldMySkillsPaginate= false;
 
   private levels= [
     {id: 1, title: "Interested", description: "I have no idea but I want to learn it"},
@@ -60,6 +64,16 @@ export class CatalogComponent implements OnInit {
       this.mySkills= JSON.parse(localStorage.getItem("mySkills"));
     }
 
+  }
+
+  ngDoCheck() {
+
+    if(this.mySkills.length > KeypointConstants.PAGINATE_ITEMS_PER_PAGE){
+      this.shouldMySkillsPaginate= true;
+    } else {
+      this.shouldMySkillsPaginate= false;
+    }
+    
   }
 
   saveSelectedSkill(){
@@ -146,6 +160,13 @@ export class CatalogComponent implements OnInit {
         (data: SkillModel[]) => {
           console.log("Data was returned" + JSON.stringify(data));
           this.skillsResults= data;
+
+          if(this.skillsResults.length > KeypointConstants.PAGINATE_ITEMS_PER_PAGE) {
+            this.shouldPaginate= true;
+          } else {
+            this.shouldPaginate= false;
+          }
+
         }
       );
     }

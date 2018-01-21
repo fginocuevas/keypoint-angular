@@ -11,8 +11,11 @@
 
 <tabset>
   <tab heading="All" id="tab1">
+    <div class="row p-3" *ngIf="shouldPaginate">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
     <div class="row no-gutters">
-        <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let skill of skillsResults">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let skill of skillsResults | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
           <div class="card card-shadow" (click)="setSelectedSkill(skill); lgModal.show()">
             <img class="card-img-top" src="../assets/images/Skills/adobe-experience-design.png" alt="Card image cap">
             <div class="card-body">
@@ -22,11 +25,14 @@
           </div>
         </div>
     </div>
+    <div class="row p-3" *ngIf="shouldPaginate">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
   </tab>
   <tab heading="My Skills">
     <div class="row no-gutters">
         <div class="col-lg-4 col-md-6 col-sm-12 p-4" *ngFor="let mySkill of mySkills">
-          <div class="card card-shadow" (click)="setSelectedSkill(skill); lgModal.show()">
+          <div class="card card-shadow">
             <img class="card-img-top" src="../assets/images/Skills/axure.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{mySkill.skillModel.name}}</h5>
@@ -35,7 +41,7 @@
             </div>
           </div>
         </div>
-    </div> 
+    </div>
   </tab>
 </tabset>
 

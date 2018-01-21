@@ -6,7 +6,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SkillsCatalogComponent } from './components/skills-catalog/skills-catalog.component';
@@ -19,13 +18,14 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProfileComponent } from './components/profile/profile.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomePageComponent,
-    MyProfileComponent,
+    HomePageComponent, 
     DashboardComponent,
     NavbarComponent,
     SkillsCatalogComponent,
@@ -33,6 +33,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     SearchSkillsComponent,
     CatalogComponent,
     ProfileComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     ModalModule.forRoot(),
     RatingModule.forRoot(),
     TabsModule.forRoot(),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
